@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Hardik Panchal — Data Scientist Portfolio</title>
+<meta name="description" content="Hardik Panchal — Data Scientist & ML Engineer. Turning data into meaningful insights with Python, Machine Learning, and Analytics. Portfolio, projects, skills, and contact." />
+<meta name="keywords" content="Hardik Panchal, Data Scientist, Machine Learning, Python, ML Engineer, Data Analyst, AI, Portfolio, Vadodara, India" />
+<meta name="author" content="Hardik Panchal" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://hardik198.github.io/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Hardik Panchal — Data Scientist Portfolio"/>
+<meta property="og:description" content="Turning data into meaningful insights with Python and Machine Learning."/>
+<meta property="og:image" content="https://opengraph.githubassets.com/1/hardik198"/>
+<meta property="og:url" content="https://hardik198.github.io/"/>
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Hardik Panchal — Data Scientist Portfolio"/>
+<meta name="twitter:description" content="Turning data into meaningful insights with Python and Machine Learning."/>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts@3.45.2/dist/apexcharts.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Hardik Panchal",
+  "jobTitle":"Data Scientist",
+  "email":"mailto:panchalhardik183@gmail.com",
+  "telephone":"+91-9662635171",
+  "address":{"@type":"PostalAddress","addressLocality":"Vadodara","addressRegion":"Gujarat","addressCountry":"India"},
+  "url":"https://hardik198.github.io/",
+  "sameAs":["https://github.com/hardik198","https://linkedin.com/in/hardik-panchal-154631292"],
+  "knowsAbout":["Python","Machine Learning","Deep Learning","Data Analysis","SQL","Power BI","TensorFlow"]
+}
+</script>
+
+<script>
+  tailwind.config = {
+    darkMode:'class',
+    theme:{
+      extend:{
+        fontFamily:{
+          sans:['Inter','system-ui','sans-serif'],
+          display:['Space Grotesk','Inter','sans-serif'],
+          mono:['JetBrains Mono','monospace']
+        },
+        colors:{
+          brand:{50:'#eef2ff',100:'#e0e7ff',200:'#c7d2fe',300:'#a5b4fc',400:'#818cf8',500:'#6366f1',600:'#4f46e5',700:'#4338ca',800:'#3730a3',900:'#312e81'}
+        },
+        keyframes:{
+          floatUp:{'0%':{opacity:0,transform:'translateY(20px)'},'100%':{opacity:1,transform:'translateY(0)'}},
+          floatY:{'0%,100%':{transform:'translateY(0)'},'50%':{transform:'translateY(-14px)'}},
+          spin3d:{'0%':{transform:'rotate(0deg)'},'100%':{transform:'rotate(360deg)'}},
+          shimmer:{'0%':{backgroundPosition:'-800px 0'},'100%':{backgroundPosition:'800px 0'}},
+          pulseDot:{'0%,100%':{opacity:1,transform:'scale(1)'},'50%':{opacity:.4,transform:'scale(1.4)'}},
+          blink:{'0%,100%':{opacity:1},'50%':{opacity:0}},
+          gradient:{'0%,100%':{backgroundPosition:'0% 50%'},'50%':{backgroundPosition:'100% 50%'}}
+        },
+        animation:{
+          floatUp:'floatUp .8s cubic-bezier(.2,.9,.3,1.2) both',
+          floatY:'floatY 5s ease-in-out infinite',
+          spin3d:'spin3d 22s linear infinite',
+          pulseDot:'pulseDot 1.6s ease-in-out infinite',
+          blink:'blink 1s step-end infinite',
+          gradient:'gradient 8s ease infinite'
+        }
+      }
+    }
+  }
+</script>
+<style>
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif}
+  ::-webkit-scrollbar{width:10px;height:10px}
+  ::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#6366f1,#a855f7);border-radius:10px}
+  ::-webkit-scrollbar-track{background:transparent}
+
+  .gradient-bg{
+    background:
+      radial-gradient(1000px 500px at -10% -10%, rgba(99,102,241,.25), transparent 60%),
+      radial-gradient(900px 500px at 110% 10%, rgba(168,85,247,.22), transparent 60%),
+      radial-gradient(700px 400px at 50% 120%, rgba(56,189,248,.18), transparent 60%),
+      linear-gradient(135deg,#f8fafc 0%, #eef2ff 100%);
+  }
+  .dark .gradient-bg{
+    background:
+      radial-gradient(1000px 500px at -10% -10%, rgba(99,102,241,.22), transparent 60%),
+      radial-gradient(900px 500px at 110% 10%, rgba(168,85,247,.18), transparent 60%),
+      radial-gradient(700px 400px at 50% 120%, rgba(56,189,248,.12), transparent 60%),
+      linear-gradient(135deg,#050816 0%, #0b1020 60%, #0f172a 100%);
+  }
+
+  .glass{
+    background:rgba(255,255,255,.6);
+    backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+    border:1px solid rgba(255,255,255,.4);
+  }
+  .dark .glass{
+    background:rgba(15,23,42,.55);
+    border:1px solid rgba(148,163,184,.15);
+  }
+
+  .glow{
+    box-shadow: 0 0 0 1px rgba(99,102,241,.25), 0 20px 60px -20px rgba(99,102,241,.5);
+  }
+
+  .grid-lines{
+    background-image:
+      linear-gradient(rgba(99,102,241,.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99,102,241,.08) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: radial-gradient(ellipse at center, black 40%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 75%);
+  }
+
+  .card{transition: transform .35s cubic-bezier(.2,.9,.3,1.2), box-shadow .35s ease, border-color .35s ease}
+  .card:hover{transform:translateY(-4px); box-shadow:0 30px 60px -25px rgba(99,102,241,.4)}
+
+  .btn{transition:all .2s ease}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:linear-gradient(135deg,#6366f1 0%,#a855f7 50%,#ec4899 100%); background-size:200% 200%; animation:gradient 8s ease infinite}
+
+  .text-grad{
+    background:linear-gradient(135deg,#6366f1 0%,#a855f7 50%,#ec4899 100%);
+    background-size:200% 200%;
+    animation:gradient 8s ease infinite;
+    -webkit-background-clip:text; background-clip:text;
+    -webkit-text-fill-color:transparent; color:transparent;
+  }
+
+  .chip{font-size:11px;padding:4px 10px;border-radius:9999px;font-weight:600;letter-spacing:.02em}
+  .chip-brand{background:rgba(99,102,241,.12);color:#4f46e5}
+  .dark .chip-brand{color:#a5b4fc}
+  .chip-outline{border:1px solid rgba(148,163,184,.35); color:#475569}
+  .dark .chip-outline{color:#cbd5e1}
+
+  .section-title{position:relative}
+  .section-title::after{
+    content:''; display:block; width:60px; height:4px; margin-top:10px; border-radius:4px;
+    background:linear-gradient(90deg,#6366f1,#a855f7,#ec4899);
+  }
+
+  .caret{display:inline-block; width:2px; height:1.1em; background:currentColor; margin-left:2px; vertical-align:-2px; animation:blink 1s step-end infinite}
+
+  .timeline{position:relative}
+  .timeline::before{
+    content:'';position:absolute;left:14px;top:0;bottom:0;width:2px;
+    background:linear-gradient(180deg,#6366f1,#a855f7,#ec4899);
+    border-radius:2px;
+  }
+  .tl-dot{position:absolute;left:6px;width:18px;height:18px;border-radius:50%;
+    background:linear-gradient(135deg,#6366f1,#a855f7); box-shadow:0 0 0 6px rgba(99,102,241,.12)}
+
+  .skill-bar{position:relative; height:8px; border-radius:8px; background:rgba(148,163,184,.2); overflow:hidden}
+  .skill-fill{height:100%; border-radius:8px; background:linear-gradient(90deg,#6366f1,#a855f7,#ec4899); width:0; transition:width 1.2s cubic-bezier(.2,.9,.3,1.2)}
+
+  .neon-ring{
+    background:conic-gradient(from 180deg, #6366f1, #a855f7, #ec4899, #6366f1);
+    filter: blur(16px); opacity:.5;
+  }
+
+  .hex{
+    width:64px;height:72px; clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+    background:linear-gradient(135deg, rgba(99,102,241,.15), rgba(168,85,247,.15));
+    display:flex;align-items:center;justify-content:center;
+    border:1px solid rgba(148,163,184,.25);
+  }
+
+  .contribution-cell{width:11px;height:11px;border-radius:2px;background:rgba(99,102,241,.08); transition: transform .15s ease}
+  .contribution-cell:hover{transform:scale(1.3)}
+  .cc-1{background:rgba(99,102,241,.25)}
+  .cc-2{background:rgba(99,102,241,.5)}
+  .cc-3{background:rgba(99,102,241,.75)}
+  .cc-4{background:rgba(168,85,247,1)}
+
+  .particle{position:absolute;border-radius:50%;background:linear-gradient(135deg,#6366f1,#a855f7);pointer-events:none;opacity:.3}
+
+  .fade-in{opacity:0;transform:translateY(20px);transition:opacity .8s ease, transform .8s ease}
+  .fade-in.visible{opacity:1;transform:translateY(0)}
+
+  .nav-link{position:relative}
+  .nav-link::after{
+    content:'';position:absolute;left:50%;bottom:-4px;width:0;height:2px;
+    background:linear-gradient(90deg,#6366f1,#a855f7);
+    transition:all .3s ease; transform:translateX(-50%); border-radius:2px;
+  }
+  .nav-link:hover::after,.nav-link.active::after{width:100%}
+
+  input,textarea,select{
+    background:rgba(255,255,255,.7);
+  }
+  .dark input,.dark textarea,.dark select{
+    background:rgba(15,23,42,.6); color:#e2e8f0; border-color:#334155
+  }
+
+  .marquee{display:flex;gap:3rem;animation: marquee 30s linear infinite}
+  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  .tab-btn.active{background:linear-gradient(135deg,#6366f1,#a855f7); color:white}
+</style>
+</head>
+<body class="gradient-bg text-slate-800 dark:text-slate-100 relative overflow-x-hidden">
+
+<!-- Animated background particles -->
+<div id="particles" class="fixed inset-0 pointer-events-none z-0"></div>
+
+<!-- ============ NAV ============ -->
+<header class="sticky top-0 z-50 glass border-b border-slate-200/60 dark:border-slate-800/60">
+  <div class="max-w-7xl mx-auto px-4 lg:px-8 h-16 flex items-center gap-4">
+    <a href="#hero" class="flex items-center gap-2 shrink-0">
+      <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 via-purple-500 to-pink-500 flex items-center justify-center text-white font-bold shadow-lg">HP</div>
+      <div class="hidden sm:block">
+        <div class="font-display font-bold leading-tight">Hardik Panchal</div>
+        <div class="text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-400">Data Scientist</div>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-6 text-sm font-medium mx-auto">
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#skills">Skills</a>
+      <a class="nav-link" href="#education">Education</a>
+      <a class="nav-link" href="#projects">Projects</a>
+      <a class="nav-link" href="#certifications">Certifications</a>
+      <a class="nav-link" href="#services">Services</a>
+      <a class="nav-link" href="#github">GitHub</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </nav>
+    <div class="flex items-center gap-2 ml-auto">
+      <a href="./Hardik_Panchal_Resume.pdf" download class="btn hidden sm:inline-flex items-center gap-2 text-xs font-semibold px-3 py-2 rounded-xl btn-primary text-white shadow-lg">
+        <i class="ri-download-2-line"></i>Resume
+      </a>
+      <button id="themeToggle" class="p-2 rounded-xl hover:bg-slate-200/60 dark:hover:bg-slate-800/60" title="Toggle theme">
+        <i class="ri-moon-line text-xl dark:hidden"></i>
+        <i class="ri-sun-line text-xl hidden dark:inline"></i>
+      </button>
+      <button id="menuBtn" class="lg:hidden p-2 rounded-xl hover:bg-slate-200/60 dark:hover:bg-slate-800/60">
+        <i class="ri-menu-line text-xl"></i>
+      </button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden lg:hidden px-4 pb-4 space-y-1 text-sm">
+    <a class="block py-2" href="#about">About</a>
+    <a class="block py-2" href="#skills">Skills</a>
+    <a class="block py-2" href="#education">Education</a>
+    <a class="block py-2" href="#projects">Projects</a>
+    <a class="block py-2" href="#certifications">Certifications</a>
+    <a class="block py-2" href="#services">Services</a>
+    <a class="block py-2" href="#github">GitHub</a>
+    <a class="block py-2" href="#contact">Contact</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="hero" class="relative overflow-hidden">
+  <div class="absolute inset-0 grid-lines opacity-60"></div>
+  <div class="max-w-7xl mx-auto px-4 lg:px-8 py-16 lg:py-24 relative z-10">
+    <div class="grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs font-semibold">
+          <span class="w-2 h-2 rounded-full bg-green-500 animate-pulseDot"></span>
+          Available for Data Scientist / ML roles
+        </div>
+        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05]">
+          Hi, I'm <span class="text-grad">Hardik Panchal</span><br/>
+          I turn <span class="text-grad">data</span> into decisions.
+        </h1>
+        <p class="text-lg text-slate-600 dark:text-slate-300 max-w-2xl">
+          <span id="typing" class="font-mono text-brand-500 dark:text-brand-300"></span><span class="caret text-brand-500 dark:text-brand-300"></span>
+        </p>
+        <p class="text-slate-600 dark:text-slate-400 max-w-2xl">
+          Aspiring Data Scientist pursuing an MSc IT in Data Science &amp; AI/ML. I build end-to-end ML solutions with
+          Python, Scikit-learn, TensorFlow, SQL, and Power BI — from data wrangling to model deployment.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#projects" class="btn btn-primary text-white text-sm font-semibold px-5 py-3 rounded-xl shadow-lg shadow-brand-500/30 inline-flex items-center gap-2">
+            <i class="ri-rocket-2-line"></i>View Projects
+          </a>
+          <a href="#contact" class="btn text-sm font-semibold px-5 py-3 rounded-xl border border-slate-300 dark:border-slate-700 inline-flex items-center gap-2 hover:bg-slate-100/60 dark:hover:bg-slate-800/60">
+            <i class="ri-mail-send-line"></i>Get in Touch
+          </a>
+          <a href="./Hardik_Panchal_Resume.pdf" download class="btn text-sm font-semibold px-5 py-3 rounded-xl border border-slate-300 dark:border-slate-700 inline-flex items-center gap-2 hover:bg-slate-100/60 dark:hover:bg-slate-800/60">
+            <i class="ri-file-download-line"></i>Download Resume
+          </a>
+        </div>
+        <!-- socials -->
+        <div class="flex items-center gap-3 pt-2 text-xl">
+          <a href="https://github.com/hardik198" target="_blank" class="w-10 h-10 rounded-xl glass flex items-center justify-center hover:text-brand-500" title="GitHub"><i class="ri-github-fill"></i></a>
+          <a href="https://linkedin.com/in/hardik-panchal-154631292" target="_blank" class="w-10 h-10 rounded-xl glass flex items-center justify-center hover:text-brand-500" title="LinkedIn"><i class="ri-linkedin-box-fill"></i></a>
+          <a href="mailto:panchalhardik183@gmail.com" class="w-10 h-10 rounded-xl glass flex items-center justify-center hover:text-brand-500" title="Email"><i class="ri-mail-fill"></i></a>
+          <a href="tel:+919662635171" class="w-10 h-10 rounded-xl glass flex items-center justify-center hover:text-brand-500" title="Phone"><i class="ri-phone-fill"></i></a>
+          <a href="https://kaggle.com/" target="_blank" class="w-10 h-10 rounded-xl glass flex items-center justify-center hover:text-brand-500" title="Kaggle"><i class="ri-database-2-line"></i></a>
+        </div>
+      </div>
+     <!-- Avatar orb -->
+<div class="lg:col-span-5 flex justify-center">
+  <div class="relative w-72 h-72 md:w-80 md:h-80">
+
+    <!-- Animated Neon Ring -->
+    <div class="absolute inset-0 rounded-full neon-ring animate-spin3d"></div>
+
+    <!-- Profile Image -->
+    <div class="absolute inset-4 rounded-full glass overflow-hidden shadow-2xl border-4 border-white/20">
+      <img
+        src="images/hardik.jpg"
+        alt="Hardik Panchal"
+        class="w-full h-full object-cover rounded-full transition-transform duration-500 hover:scale-110"
+      />
+    </div>
+
+    <!-- Floating Tech Chips -->
+    <div class="absolute -top-2 -left-6 glass px-3 py-1.5 rounded-full text-xs font-mono shadow-md animate-floatY" style="animation-delay:.2s">
+      <i class="ri-code-s-slash-line text-brand-500"></i> Python
+    </div>
+
+    <div class="absolute top-8 -right-8 glass px-3 py-1.5 rounded-full text-xs font-mono shadow-md animate-floatY" style="animation-delay:.6s">
+      <i class="ri-database-2-line text-purple-500"></i> SQL
+    </div>
+
+    <div class="absolute -bottom-2 -left-2 glass px-3 py-1.5 rounded-full text-xs font-mono shadow-md animate-floatY" style="animation-delay:1s">
+      <i class="ri-brain-line text-pink-500"></i> TensorFlow
+    </div>
+
+    <div class="absolute -bottom-6 right-6 glass px-3 py-1.5 rounded-full text-xs font-mono shadow-md animate-floatY" style="animation-delay:1.4s">
+      <i class="ri-bar-chart-2-line text-sky-500"></i> Power BI
+    </div>
+
+  </div>
+</div>
+
+    <!-- KPI strip -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-14">
+      <div class="glass card rounded-2xl p-5 text-center">
+        <div class="text-3xl font-display font-extrabold text-grad" data-counter="8" data-suffix="+">0</div>
+        <div class="text-xs uppercase tracking-wider text-slate-500 mt-1">Projects Built</div>
+      </div>
+      <div class="glass card rounded-2xl p-5 text-center">
+        <div class="text-3xl font-display font-extrabold text-grad" data-counter="15" data-suffix="+">0</div>
+        <div class="text-xs uppercase tracking-wider text-slate-500 mt-1">Tools Mastered</div>
+      </div>
+      <div class="glass card rounded-2xl p-5 text-center">
+        <div class="text-3xl font-display font-extrabold text-grad" data-counter="807" data-suffix="/1000">0</div>
+        <div class="text-xs uppercase tracking-wider text-slate-500 mt-1">BSc IT CGPA (8.07)</div>
+      </div>
+      <div class="glass card rounded-2xl p-5 text-center">
+        <div class="text-3xl font-display font-extrabold text-grad" data-counter="93" data-suffix="%">0</div>
+        <div class="text-xs uppercase tracking-wider text-slate-500 mt-1">10th Standard</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="max-w-7xl mx-auto px-4 lg:px-8 py-16 fade-in">
+  <div class="grid lg:grid-cols-12 gap-10 items-start">
+    <div class="lg:col-span-5">
+      <div class="text-xs uppercase tracking-widest text-brand-500 font-semibold">01 — About</div>
+      <h2 class="section-title font-display text-3xl md:text-4xl font-extrabold mt-2">Who am I?</h2>
+    </div>
+    <div class="lg:col-span-7 space-y-4 text-slate-600 dark:text-slate-300 leading-relaxed">
+      <p>I'm a <strong class="text-slate-800 dark:text-white">Data Scientist in the making</strong>, currently pursuing an MSc IT in Data Science &amp; AI/ML after completing a BSc IT with a <strong>CGPA of 8.07</strong>. My journey started with a <strong>commerce background in 12th</strong>, which shaped my business-first mindset — I don't just build models, I connect them to real outcomes. Consistent academic performance (10th: 93%, 12th: 86%) reflects a genuine passion for solving problems with data.</p>
+      <p>My focus is <strong>end-to-end machine learning</strong> — from data collection and EDA to feature engineering, model building, evaluation, and deployment. I love making numbers tell a story through clean visualizations and dashboards.</p>
+      <p>I'm open to <strong>relocation</strong> and remote work, and actively looking for Data Scientist, Data Analyst, ML Engineer, or AI Engineer opportunities at product-driven teams.</p>
+      <div class="grid grid-cols-2 gap-3 pt-2">
+        <div class="glass card rounded-xl p-4"><div class="text-xs text-slate-500">Location</div><div class="font-semibold mt-1"><i class="ri-map-pin-line text-brand-500"></i> Vadodara, Gujarat</div></div>
+        <div class="glass card rounded-xl p-4"><div class="text-xs text-slate-500">Availability</div><div class="font-semibold mt-1"><i class="ri-time-line text-brand-500"></i> Immediate joiner</div></div>
+        <div class="glass card rounded-xl p-4"><div class="text-xs text-slate-500">Relocation</div><div class="font-semibold mt-1"><i class="ri-flight-takeoff-line text-brand-500"></i> Yes, worldwide</div></div>
+        <div class="glass card rounded-xl p-4"><div class="text-xs text-slate-500">Remote</div><div class="font-semibold mt-1"><i class="ri-earth-line text-brand-500"></i> Open</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills" class="max-w-7xl mx-auto px-4 lg:px-8 py-16 fade-in">
+  <div class="mb-8">
+    <div class="text-xs uppercase tracking-widest text-brand-500 font-semibold">02 — Skills</div>
+    <h2 class="section-title font-display text-3xl md:text-4xl font-extrabold mt-2">Toolbox &amp; Expertise</h2>
+  </div>
+
+  <!-- Tabs -->
+  <div class="flex flex-wrap gap-2 mb-6" id="skillTabs">
+    <button class="tab-btn active px-4 py-2 rounded-full text-xs font-semibold border border-slate-300 dark:border-slate-700" data-tab="lang">Languages</button>
+    <button class="tab-btn px-4 py-2 rounded-full text-xs font-semibold border border-slate-300 dark:border-slate-700" data-tab="lib">Libraries</button>
+    <button class="tab-btn px-4 py-2 rounded-full text-xs font-semibold border border-slate-300 dark:border-slate-700" data-tab="db">Databases</button>
+    <button class="tab-btn px-4 py-2 rounded-full text-xs font-semibold border border-slate-300 dark:border-slate-700" data-tab="viz">Visualization</button>
+    <button class="tab-btn px-4 py-2 rounded-full text-xs font-semibold border border-slate-300 dark:border-slate-700" data-tab="tools">Tools</button>
+    <button class="tab-btn px-4 py-2 rounded-full text-xs font-semibold border border-slate-300 dark:border-slate-700" data-tab="ml">Machine Learning</button>
+  </div>
+
+  <div id="skillsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+
+  <!-- Skills marquee -->
+  <div class="mt-10 overflow-hidden glass rounded-2xl py-4 border border-slate-200/60 dark:border-slate-800/60">
+    <div class="marquee text-slate-500 dark:text-slate-400 text-sm font-mono whitespace-nowrap">
+      <span class="flex items-center gap-8 pr-8">
+        <span><i class="ri-code-s-slash-line text-brand-500"></i> Python</span>
+        <span><i class="ri-database-2-line text-purple-500"></i> SQL</span>
+        <span><i class="ri-brain-line text-pink-500"></i> TensorFlow</span>
+        <span><i class="ri-flashlight-line text-emerald-500"></i> Scikit-learn</span>
+        <span><i class="ri-bar-chart-2-line text-sky-500"></i> Power BI</span>
+        <span><i class="ri-line-chart-line text-amber-500"></i> Pandas</span>
+        <span><i class="ri-git-branch-line text-rose-500"></i> Git</span>
+        <span><i class="ri-cloud-line text-cyan-500"></i> Streamlit</span>
+        <span><i class="ri-terminal-box-line text-indigo-500"></i> Linux</span>
+        <span><i class="ri-database-line text-violet-500"></i> MongoDB</span>
+      </span>
+      <span class="flex items-center gap-8 pr-8" aria-hidden="true">
+        <span><i class="ri-code-s-slash-line text-brand-500"></i> Python</span>
+        <span><i class="ri-database-2-line text-purple-500"></i> SQL</span>
+        <span><i class="ri-brain-line text-pink-500"></i> TensorFlow</span>
+        <span><i class="ri-flashlight-line text-emerald-500"></i> Scikit-learn</span>
+        <span><i class="ri-bar-chart-2-line text-sky-500"></i> Power BI</span>
+        <span><i class="ri-line-chart-line text-amber-500"></i> Pandas</span>
+        <span><i class="ri-git-branch-line text-rose-500"></i> Git</span>
+        <span><i class="ri-cloud-line text-cyan-500"></i> Streamlit</span>
+        <span><i class="ri-terminal-box-line text-indigo-500"></i> Linux</span>
+        <span><i class="ri-database-line text-violet-500"></i> MongoDB</span>
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION ============ -->
+<section id="education" class="max-w-7xl mx-auto px-4 lg:px-8 py-16 fade-in">
+  <div class="mb-8">
+    <div class="text-xs uppercase tracking-widest text-brand-500 font-semibold">03 — Education</div>
+    <h2 class="section-title font-display text-3xl md:text-4xl font-extrabold mt-2">Academic Journey</h2>
+  </div>
+  <div class="timeline pl-12 space-y-6">
+    <div class="relative">
+      <div class="tl-dot" style="top:4px"></div>
+      <div class="glass card rounded-2xl p-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <div class="font-display text-lg font-bold">MSc IT — Data Science &amp; AI/ML</div>
+            <div class="text-sm text-slate-500">Currently pursuing</div>
+          </div>
+          <span class="chip chip-brand">In progress</span>
+        </div>
+        <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Advanced coursework in machine learning, deep learning, statistical modeling, NLP, and big data analytics.</p>
+      </div>
+    </div>
+    <div class="relative">
+      <div class="tl-dot" style="top:4px"></div>
+      <div class="glass card rounded-2xl p-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <div class="font-display text-lg font-bold">BSc IT</div>
+            <div class="text-sm text-slate-500">Graduated</div>
+          </div>
+          <span class="chip chip-brand">CGPA 8.07</span>
+        </div>
+        <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">Foundations in programming, databases, data structures, statistics, and applied computing.</p>
+      </div>
+    </div>
+    <div class="relative">
+      <div class="tl-dot" style="top:4px"></div>
+      <div class="glass card rounded-2xl p-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <div class="font-display text-lg font-bold">Higher Secondary (12th)</div>
+            <div class="text-sm text-slate-500">Commerce stream</div>
+          </div>
+          <span class="chip chip-brand">86%</span>
+        </div>
+      </div>
+    </div>
+    <div class="relative">
+      <div class="tl-dot" style="top:4px"></div>
+      <div class="glass card rounded-2xl p-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <div class="font-display text-lg font-bold">Secondary (10th)</div>
+            <div class="text-sm text-slate-500">Consistent top performer</div>
+          </div>
+          <span class="chip chip-brand">93%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="max-w-7xl mx-auto px-4 lg:px-8 py-16 fade-in">
+  <div class="flex flex-wrap items-end justify-between gap-4 mb-6">
+    <div>
+      <div class="text-xs uppercase tracking-widest text-brand-500 font-semibold">04 — Projects</div>
+      <h2 class="section-title font-display text-3xl md:text-4xl font-extrabold mt-2">Selected Work</h2>
+    </div>
+    <div class="flex items-center gap-2">
+      <div class="relative">
+        <i class="ri-search-line absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
+        <input id="projSearch" type="text" placeholder="Search projects..." class="pl-9 pr-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 text-sm"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filters -->
+  <div id="projFilters" class="flex flex-wrap gap-2 mb-6"></div>
+
+  <!-- Grid -->
+  <div id="projectsGrid" class="grid md:grid-cols-2 xl:grid-cols-3 gap-5"></div>
+</section>
+
+<!-- ============ CERTIFICATIONS ============ -->
+<section id="certifications" class="max-w-7xl mx-auto px-4 lg:px-8 py-16 fade-in">
+  <div class="mb-8">
+    <div class="text-xs uppercase tracking-widest text-brand-500 font-semibold">05 — Certifications</div>
+    <h2 class="section-title font-display text-3xl md:text-4xl font-extrabold mt-2">Learning &amp; Credentials</h2>
+  </div>
+  <div id="certGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+</section>
+
+<!-- ============ ACHIEVEMENTS ============ -->
+<section id="achievements" class="max-w-7xl mx-auto px-4 lg:px-8 py-16 fade-in">
+  <div class="mb-8">
+    <div class="text-xs uppercase tracking-widest text-brand-500 font-semibold">06 — Achievements</div>
+    <h2 class="section-title font-display text-3xl md:text-4xl font-extrabold mt-2">Highlights</h2>
+  </div>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4" id="achGrid"></div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="max-w-7xl mx-auto px-4 lg:px-8 py-16 fade-in">
+  <div class="mb-8">
+    <div class="text-xs uppercase tracking-widest text-brand-500 font-semibold">07 — Services</div>
+    <h2 class="section-title font-display text-3xl md:text-4xl font-extrabold mt-2">What I Can Do For You</h2>
+  </div>
+  <div id="servicesGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+</section>
+
+<!-- ============ GITHUB ============ -->
+<section id="github" class="max-w-7xl mx-auto px-4 lg:px-8 py-16 fade-in">
+  <div class="mb-8">
+    <div class="text-xs uppercase tracking-widest text-brand-500 font-semibold">08 — GitHub Activity</div>
+    <h2 class="section-title font-display text-3xl md:text-4xl font-extrabold mt-2">Open Source &amp; Repos</h2>
+  </div>
+  <div class="grid lg:grid-cols-3 gap-4">
+    <div class="glass card rounded-2xl p-5 lg:col-span-2">
+      <div class="flex items-center justify-between">
+        <div>
+          <div class="text-xs uppercase tracking-wider text-slate-500">Contribution graph</div>
+          <div class="font-display text-lg font-bold">Coding activity — last 20 weeks</div>
+        </div>
+        <a href="https://github.com/hardik198" target="_blank" class="text-xs text-brand-500 hover:underline"><i class="ri-external-link-line"></i> @hardik198</a>
+      </div>
+      <div id="contribGrid" class="flex gap-[3px] mt-4 overflow-x-auto"></div>
+      <div class="flex items-center gap-2 mt-3 text-xs text-slate-500">
+        Less
+        <span class="contribution-cell"></span>
+        <span class="contribution-cell cc-1"></span>
+        <span class="contribution-cell cc-2"></span>
+        <span class="contribution-cell cc-3"></span>
+        <span class="contribution-cell cc-4"></span>
+        More
+      </div>
+    </div>
+    <div class="glass card rounded-2xl p-5">
+      <div class="text-xs uppercase tracking-wider text-slate-500">Stats</div>
+      <div class="font-display text-lg font-bold mb-3">At a glance</div>
+      <div class="space-y-3 text-sm">
+        <div class="flex justify-between"><span><i class="ri-git-repository-line text-brand-500"></i> Public repos</span><span class="font-bold">12</span></div>
+        <div class="flex justify-between"><span><i class="ri-star-line text-amber-500"></i> Total stars</span><span class="font-bold">28</span></div>
+        <div class="flex justify-between"><span><i class="ri-git-commit-line text-emerald-500"></i> Yearly commits</span><span class="font-bold">312</span></div>
+        <div class="flex justify-between"><span><i class="ri-code-line text-purple-500"></i> Top language</span><span class="font-bold">Python</span></div>
+        <div class="flex justify-between"><span><i class="ri-fire-line text-rose-500"></i> Longest streak</span><span class="font-bold">21 days</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4" id="repoGrid"></div>
+</section>
+
+<!-- ============ ANALYTICS DASHBOARD ============ -->
+<section id="analytics" class="max-w-7xl mx-auto px-4 lg:px-8 py-16 fade-in">
+  <div class="mb-8">
+    <div class="text-xs uppercase tracking-widest text-brand-500 font-semibold">09 — Live Data</div>
+    <h2 class="section-title font-display text-3xl md:text-4xl font-extrabold mt-2">Mini Analytics Dashboard</h2>
+    <p class="text-sm text-slate-500 mt-3 max-w-2xl">A tiny showcase of the kind of interactive dashboards I build — because a portfolio without charts isn't a data-science portfolio.</p>
+  </div>
+  <div class="grid lg:grid-cols-3 gap-4">
+    <div class="glass card rounded-2xl p-5 lg:col-span-2">
+      <div class="font-display font-semibold mb-2">Model Accuracy Across Projects</div>
+      <div id="modelChart"></div>
+    </div>
+    <div class="glass card rounded-2xl p-5">
+      <div class="font-display font-semibold mb-2">Skill Distribution</div>
+      <div id="skillPie"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section id="testimonials" class="max-w-7xl mx-auto px-4 lg:px-8 py-16 fade-in">
+  <div class="mb-8">
+    <div class="text-xs uppercase tracking-widest text-brand-500 font-semibold">10 — Testimonials</div>
+    <h2 class="section-title font-display text-3xl md:text-4xl font-extrabold mt-2">Kind Words</h2>
+  </div>
+  <div class="grid md:grid-cols-3 gap-4" id="testGrid"></div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="max-w-7xl mx-auto px-4 lg:px-8 py-16 fade-in">
+  <div class="grid lg:grid-cols-2 gap-8 items-start">
+    <div>
+      <div class="text-xs uppercase tracking-widest text-brand-500 font-semibold">11 — Contact</div>
+      <h2 class="section-title font-display text-3xl md:text-4xl font-extrabold mt-2">Let's build something with data</h2>
+      <p class="text-slate-600 dark:text-slate-300 mt-4 max-w-xl">Have an internship, a project, or a role in mind? I'd love to hear about it. I'm currently <strong class="text-slate-800 dark:text-white">available for full-time and freelance opportunities</strong>.</p>
+      <div class="mt-6 space-y-3">
+        <a href="mailto:panchalhardik183@gmail.com" class="glass card flex items-center gap-3 p-4 rounded-xl group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-purple-500 text-white flex items-center justify-center"><i class="ri-mail-line"></i></div>
+          <div class="min-w-0">
+            <div class="text-xs uppercase tracking-wider text-slate-500">Email</div>
+            <div class="font-semibold truncate">panchalhardik183@gmail.com</div>
+          </div>
+          <i class="ri-arrow-right-up-line ml-auto text-slate-400 group-hover:text-brand-500"></i>
+        </a>
+        <a href="tel:+919662635171" class="glass card flex items-center gap-3 p-4 rounded-xl group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 text-white flex items-center justify-center"><i class="ri-phone-line"></i></div>
+          <div>
+            <div class="text-xs uppercase tracking-wider text-slate-500">Phone</div>
+            <div class="font-semibold">+91 96626 35171</div>
+          </div>
+          <i class="ri-arrow-right-up-line ml-auto text-slate-400 group-hover:text-brand-500"></i>
+        </a>
+        <div class="glass card flex items-center gap-3 p-4 rounded-xl">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-rose-500 to-pink-500 text-white flex items-center justify-center"><i class="ri-map-pin-line"></i></div>
+          <div>
+            <div class="text-xs uppercase tracking-wider text-slate-500">Location</div>
+            <div class="font-semibold">Vadodara, Gujarat, India</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form id="contactForm" class="glass rounded-2xl p-6 space-y-4">
+      <div>
+        <label class="text-xs uppercase tracking-wider text-slate-500 font-semibold">Your Name</label>
+        <input required type="text" name="name" class="mt-1 w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-sm"/>
+      </div>
+      <div>
+        <label class="text-xs uppercase tracking-wider text-slate-500 font-semibold">Email</label>
+        <input required type="email" name="email" class="mt-1 w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-sm"/>
+      </div>
+      <div>
+        <label class="text-xs uppercase tracking-wider text-slate-500 font-semibold">Subject</label>
+        <input type="text" name="subject" class="mt-1 w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-sm"/>
+      </div>
+      <div>
+        <label class="text-xs uppercase tracking-wider text-slate-500 font-semibold">Message</label>
+        <textarea required name="message" rows="5" class="mt-1 w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-sm resize-none"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary text-white font-semibold w-full py-3 rounded-xl shadow-lg shadow-brand-500/30">
+        <i class="ri-send-plane-2-line mr-1"></i>Send Message
+      </button>
+      <p id="formMsg" class="text-xs text-center text-slate-500"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="border-t border-slate-200/60 dark:border-slate-800/60 mt-8">
+  <div class="max-w-7xl mx-auto px-4 lg:px-8 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+    <div class="flex items-center gap-2">
+      <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 via-purple-500 to-pink-500 text-white flex items-center justify-center font-bold text-xs">HP</div>
+      <span>© 2026 Hardik Panchal. Crafted with data &amp; care.</span>
+    </div>
+    <div class="flex items-center gap-4 text-lg">
+      <a href="https://github.com/hardik198" target="_blank" class="hover:text-brand-500"><i class="ri-github-fill"></i></a>
+      <a href="https://linkedin.com/in/hardik-panchal-154631292" target="_blank" class="hover:text-brand-500"><i class="ri-linkedin-box-fill"></i></a>
+      <a href="mailto:panchalhardik183@gmail.com" class="hover:text-brand-500"><i class="ri-mail-fill"></i></a>
+    </div>
+    <div class="text-xs">
+      <span id="visitor" class="glass px-3 py-1.5 rounded-full font-mono">Visitors: <span id="visitorCount">—</span></span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
