@@ -1,173 +1,173 @@
 /* ==============================================================
-   Hardik Panchal — Data Scientist Portfolio (Interactive Layer)
+   Palak Panchal — Full-Stack Developer Portfolio (Interactive Layer)
    Vanilla JS + Tailwind + ApexCharts + Remix Icons
    ============================================================== */
 
 /* ---------- Data ---------- */
 const TYPING_PHRASES = [
-  "> Data Scientist · ML Engineer",
-  "> Python · SQL · TensorFlow",
-  "> Turning raw data into decisions",
-  "> Open to Data Scientist & ML roles"
+  "> Full-Stack Developer · Software Developer",
+  "> React · Angular · Node.js · Laravel",
+  "> Building scalable web applications",
+  "> Open to Full-Stack & Software Developer roles"
 ];
 
 const SKILLS = {
   lang: [
-    { name:'Python',     level:90, icon:'ri-code-s-slash-line',   color:'from-brand-500 to-purple-500' },
-    { name:'SQL',        level:85, icon:'ri-database-2-line',     color:'from-sky-500 to-blue-500' },
-    { name:'JavaScript', level:70, icon:'ri-javascript-line',     color:'from-amber-500 to-orange-500' },
-    { name:'Java',       level:65, icon:'ri-cup-line',            color:'from-rose-500 to-pink-500' },
+    { name:'JavaScript', level:88, icon:'ri-javascript-line',     color:'from-amber-500 to-orange-500' },
+    { name:'HTML5',      level:92, icon:'ri-html5-line',          color:'from-orange-500 to-red-500' },
+    { name:'CSS3',       level:90, icon:'ri-css3-line',           color:'from-blue-500 to-indigo-500' },
+    { name:'Java',       level:70, icon:'ri-code-s-slash-line',   color:'from-rose-500 to-pink-500' },
+    { name:'PHP',        level:75, icon:'ri-php-line',             color:'from-violet-500 to-purple-500' },
+    { name:'SQL',        level:82, icon:'ri-database-2-line',     color:'from-sky-500 to-blue-500' },
   ],
   lib: [
-    { name:'Pandas',       level:90, icon:'ri-table-line',        color:'from-brand-500 to-purple-500' },
-    { name:'NumPy',        level:88, icon:'ri-function-line',     color:'from-emerald-500 to-teal-500' },
-    { name:'Scikit-learn', level:85, icon:'ri-flashlight-line',   color:'from-amber-500 to-orange-500' },
-    { name:'TensorFlow',   level:78, icon:'ri-brain-line',        color:'from-pink-500 to-rose-500' },
-    { name:'Keras',        level:78, icon:'ri-magic-line',        color:'from-rose-500 to-red-500' },
-    { name:'Matplotlib',   level:85, icon:'ri-line-chart-line',   color:'from-purple-500 to-pink-500' },
-    { name:'Seaborn',      level:82, icon:'ri-bar-chart-2-line',  color:'from-cyan-500 to-sky-500' },
-    { name:'OpenCV',       level:70, icon:'ri-camera-lens-line',  color:'from-slate-500 to-slate-700' },
+    { name:'React',       level:88, icon:'ri-reactjs-line',       color:'from-cyan-500 to-blue-500' },
+    { name:'Angular',     level:80, icon:'ri-angularjs-line',     color:'from-red-500 to-rose-500' },
+    { name:'Node.js',     level:85, icon:'ri-nodejs-line',        color:'from-emerald-500 to-green-500' },
+    { name:'Express.js',  level:83, icon:'ri-server-line',        color:'from-slate-500 to-slate-700' },
+    { name:'Laravel',     level:78, icon:'ri-code-box-line',      color:'from-rose-500 to-red-500' },
+    { name:'Bootstrap',   level:90, icon:'ri-bootstrap-line',     color:'from-purple-500 to-violet-500' },
+    { name:'Tailwind CSS',level:88, icon:'ri-palette-line',       color:'from-sky-500 to-cyan-500' },
   ],
   db: [
-    { name:'MySQL',      level:85, icon:'ri-database-line', color:'from-blue-500 to-indigo-500' },
-    { name:'PostgreSQL', level:75, icon:'ri-database-2-line', color:'from-sky-500 to-blue-500' },
-    { name:'MongoDB',    level:70, icon:'ri-server-line', color:'from-emerald-500 to-teal-500' },
+    { name:'MySQL',      level:85, icon:'ri-database-line',     color:'from-blue-500 to-indigo-500' },
+    { name:'PostgreSQL', level:72, icon:'ri-database-2-line',   color:'from-sky-500 to-blue-500' },
+    { name:'MongoDB',    level:70, icon:'ri-server-line',       color:'from-emerald-500 to-teal-500' },
   ],
   viz: [
-    { name:'Power BI', level:85, icon:'ri-pie-chart-2-line',  color:'from-amber-500 to-orange-500' },
-    { name:'Tableau',  level:75, icon:'ri-bar-chart-fill',    color:'from-sky-500 to-blue-500' },
-    { name:'Excel',    level:88, icon:'ri-file-excel-2-line', color:'from-emerald-500 to-teal-500' },
+    { name:'REST APIs',    level:88, icon:'ri-api-line',           color:'from-emerald-500 to-teal-500' },
+    { name:'Postman',      level:82, icon:'ri-send-plane-line',    color:'from-orange-500 to-amber-500' },
+    { name:'Swagger',      level:72, icon:'ri-file-code-line',     color:'from-green-500 to-emerald-500' },
   ],
   tools: [
-    { name:'Git',              level:85, icon:'ri-git-branch-line',   color:'from-rose-500 to-red-500' },
-    { name:'GitHub',           level:90, icon:'ri-github-fill',       color:'from-slate-600 to-slate-800' },
-    { name:'VS Code',          level:92, icon:'ri-code-box-line',     color:'from-blue-500 to-indigo-500' },
-    { name:'Jupyter Notebook', level:90, icon:'ri-book-open-line',    color:'from-amber-500 to-orange-500' },
-    { name:'Google Colab',     level:88, icon:'ri-cloud-line',        color:'from-amber-500 to-yellow-500' },
-    { name:'Docker',           level:60, icon:'ri-ship-2-line',       color:'from-sky-500 to-blue-500' },
-    { name:'Linux',            level:75, icon:'ri-terminal-box-line', color:'from-slate-500 to-slate-700' },
-    { name:'Streamlit',        level:82, icon:'ri-window-line',       color:'from-rose-500 to-pink-500' },
+    { name:'Git',         level:88, icon:'ri-git-branch-line',    color:'from-rose-500 to-red-500' },
+    { name:'GitHub',      level:90, icon:'ri-github-fill',        color:'from-slate-600 to-slate-800' },
+    { name:'VS Code',     level:92, icon:'ri-code-box-line',      color:'from-blue-500 to-indigo-500' },
+    { name:'npm',         level:85, icon:'ri-terminal-box-line',  color:'from-red-500 to-rose-500' },
+    { name:'XAMPP',       level:80, icon:'ri-stack-line',         color:'from-amber-500 to-orange-500' },
+    { name:'Docker',      level:60, icon:'ri-ship-2-line',        color:'from-sky-500 to-blue-500' },
+    { name:'Linux',       level:72, icon:'ri-terminal-line',      color:'from-slate-500 to-slate-700' },
+    { name:'Figma',       level:70, icon:'ri-figma-line',         color:'from-pink-500 to-purple-500' },
   ],
   ml: [
-    { name:'Regression',            level:88, icon:'ri-line-chart-line',      color:'from-brand-500 to-purple-500' },
-    { name:'Classification',        level:88, icon:'ri-scales-3-line',        color:'from-emerald-500 to-teal-500' },
-    { name:'Clustering',            level:80, icon:'ri-bubble-chart-line',    color:'from-purple-500 to-pink-500' },
-    { name:'NLP',                   level:75, icon:'ri-chat-quote-line',      color:'from-amber-500 to-orange-500' },
-    { name:'Deep Learning',         level:78, icon:'ri-brain-line',           color:'from-pink-500 to-rose-500' },
-    { name:'Recommendation Systems',level:76, icon:'ri-lightbulb-flash-line', color:'from-cyan-500 to-sky-500' },
-    { name:'Time Series',           level:74, icon:'ri-time-line',            color:'from-blue-500 to-indigo-500' },
-    { name:'Feature Engineering',   level:85, icon:'ri-tools-line',           color:'from-emerald-500 to-lime-500' },
-    { name:'Model Deployment',      level:75, icon:'ri-rocket-2-line',        color:'from-rose-500 to-red-500' },
+    { name:'Responsive Design',  level:92, icon:'ri-layout-responsive-line', color:'from-brand-500 to-purple-500' },
+    { name:'REST API Design',    level:88, icon:'ri-api-line',              color:'from-emerald-500 to-teal-500' },
+    { name:'MVC Architecture',   level:85, icon:'ri-stack-line',            color:'from-purple-500 to-pink-500' },
+    { name:'Authentication',     level:82, icon:'ri-shield-check-line',     color:'from-amber-500 to-orange-500' },
+    { name:'CRUD Operations',    level:92, icon:'ri-database-line',         color:'from-sky-500 to-blue-500' },
+    { name:'Version Control',    level:88, icon:'ri-git-branch-line',       color:'from-rose-500 to-red-500' },
+    { name:'Debugging',          level:85, icon:'ri-bug-line',              color:'from-cyan-500 to-sky-500' },
+    { name:'Testing',            level:75, icon:'ri-test-tube-line',        color:'from-emerald-500 to-lime-500' },
   ]
 };
 
 const PROJECTS = [
   {
-    id:1, title:'Customer Churn Prediction',
-    category:'Machine Learning',
-    desc:'End-to-end ML pipeline predicting telecom customer churn with feature engineering, class-imbalance handling, and Streamlit deployment.',
-    tech:['Python','Pandas','Scikit-learn','XGBoost','Streamlit'],
-    features:['SMOTE for class imbalance','Model comparison (LR / RF / XGB)','ROC-AUC 0.83','Interactive Streamlit demo'],
-    result:'86% accuracy, 0.83 ROC-AUC',
-    github:'https://github.com/hardik198', demo:'#',
+    id:1, title:'E-Commerce Web Application',
+    category:'Full-Stack',
+    desc:'A complete e-commerce platform with user authentication, product catalog, shopping cart, payment integration, and admin dashboard built with React and Node.js.',
+    tech:['React','Node.js','Express.js','MongoDB','Stripe API'],
+    features:['JWT authentication & authorization','Product search & filtering','Shopping cart with session management','Admin panel for inventory management'],
+    result:'Full CRUD with payment integration',
+    github:'https://github.com/palak183', demo:'#',
     gradient:'from-brand-500 via-purple-500 to-pink-500',
-    icon:'ri-user-follow-line'
+    icon:'ri-shopping-cart-2-line'
   },
   {
-    id:2, title:'Sales Analytics Dashboard',
-    category:'Business Intelligence',
-    desc:'Interactive Power BI dashboard on 100K+ retail transactions covering revenue, profit, and regional trends with drill-through.',
-    tech:['Power BI','SQL','DAX','Python'],
-    features:['KPIs & YoY / MoM','Drill-through pages','Customer segmentation','Executive summary page'],
-    result:'Identified top 10 SKUs = 62% revenue',
-    github:'https://github.com/hardik198', demo:'#',
+    id:2, title:'Task Management System',
+    category:'Full-Stack',
+    desc:'A collaborative task management app with real-time updates, drag-and-drop boards, team assignments, and progress tracking using Angular and Laravel.',
+    tech:['Angular','Laravel','MySQL','Bootstrap','REST API'],
+    features:['Kanban-style drag & drop boards','Team collaboration & role management','Real-time task status updates','Email notifications & reminders'],
+    result:'Real-time collaboration platform',
+    github:'https://github.com/palak183', demo:'#',
     gradient:'from-amber-500 via-orange-500 to-rose-500',
-    icon:'ri-bar-chart-box-line'
+    icon:'ri-task-line'
   },
   {
-    id:3, title:'Movie Recommendation System',
-    category:'NLP',
-    desc:'Content-based recommender on MovieLens using TF-IDF and cosine similarity, deployed as a Streamlit app.',
-    tech:['Python','NLP','TF-IDF','Cosine Similarity','Streamlit'],
-    features:['Text vectorization','Metadata fusion (cast, genre, keywords)','Real-time top-5 recs','Deployed on Streamlit Cloud'],
-    result:'Top-5 recs in < 200ms',
-    github:'https://github.com/hardik198', demo:'#',
+    id:3, title:'Portfolio Website',
+    category:'Frontend',
+    desc:'A modern, responsive portfolio website with dark/light theme toggle, smooth animations, interactive charts, and a contact form with glassmorphism design.',
+    tech:['HTML5','CSS3','JavaScript','Tailwind CSS','ApexCharts'],
+    features:['Dark & light theme toggle','Scroll animations & transitions','Interactive analytics dashboard','Responsive on all devices'],
+    result:'Fully responsive & animated',
+    github:'https://github.com/palak183', demo:'#',
     gradient:'from-sky-500 via-cyan-500 to-teal-500',
-    icon:'ri-film-line'
+    icon:'ri-palette-line'
   },
   {
-    id:4, title:'Handwritten Digit Recognition',
-    category:'Deep Learning',
-    desc:'Convolutional Neural Network on MNIST achieving ~99% test accuracy with an OpenCV real-time interface for user-drawn digits.',
-    tech:['TensorFlow','Keras','OpenCV','NumPy'],
-    features:['Data augmentation','Dropout & batch norm','Real-time inference','CNN architecture'],
-    result:'~99% test accuracy',
-    github:'https://github.com/hardik198', demo:'#',
+    id:4, title:'Student Management System',
+    category:'Backend',
+    desc:'A comprehensive student management system with attendance tracking, grade management, timetable scheduling, and report generation using PHP and MySQL.',
+    tech:['PHP','MySQL','Bootstrap','JavaScript','jQuery'],
+    features:['Student enrollment & profiles','Attendance tracking system','Grade management & report cards','Timetable scheduling module'],
+    result:'Complete academic management',
+    github:'https://github.com/palak183', demo:'#',
     gradient:'from-emerald-500 via-teal-500 to-cyan-500',
-    icon:'ri-pencil-ruler-2-line'
+    icon:'ri-graduation-cap-line'
   },
   {
-    id:5, title:'House Price Prediction',
-    category:'Machine Learning',
-    desc:'Regression pipeline predicting housing prices with feature engineering, ensemble models, and SHAP-based explainability.',
-    tech:['Python','Scikit-learn','XGBoost','SHAP','Pandas'],
-    features:['Missing-value imputation','Log-transform on skewed features','Stacked ensemble','Explainability with SHAP'],
-    result:'RMSE reduced by 22%',
-    github:'https://github.com/hardik198', demo:'#',
+    id:5, title:'Blog Platform',
+    category:'Full-Stack',
+    desc:'A full-featured blog platform with rich text editing, user roles, comments, categories, tags, and SEO-friendly URLs built with React and Express.js.',
+    tech:['React','Express.js','MongoDB','Node.js','REST API'],
+    features:['Rich text editor for posts','User roles: admin, author, reader','Comment system with moderation','Category & tag-based navigation'],
+    result:'Multi-user blog with CMS',
+    github:'https://github.com/palak183', demo:'#',
     gradient:'from-rose-500 via-pink-500 to-fuchsia-500',
-    icon:'ri-home-4-line'
+    icon:'ri-quill-pen-line'
   },
   {
-    id:6, title:'Sentiment Analyzer',
-    category:'NLP',
-    desc:'Twitter sentiment classifier using classical ML + a lightweight LSTM, exposed via a Flask API.',
-    tech:['Python','NLTK','Scikit-learn','LSTM','Flask'],
-    features:['Text cleaning pipeline','TF-IDF + Logistic Regression baseline','LSTM upgrade','REST API deployment'],
-    result:'F1 0.88 on test set',
-    github:'https://github.com/hardik198', demo:'#',
+    id:6, title:'Weather Dashboard',
+    category:'Frontend',
+    desc:'A dynamic weather dashboard that fetches real-time data from OpenWeather API, displays forecasts, and saves favorite locations using JavaScript and CSS.',
+    tech:['JavaScript','HTML5','CSS3','OpenWeather API','LocalStorage'],
+    features:['Real-time weather data fetching','5-day forecast display','Save & manage favorite cities','Geolocation-based weather lookup'],
+    result:'Live API integration',
+    github:'https://github.com/palak183', demo:'#',
     gradient:'from-indigo-500 via-blue-500 to-cyan-500',
-    icon:'ri-emotion-happy-line'
+    icon:'ri-cloud-line'
   }
 ];
 
 const CERTS = [
-  { title:'Google Data Analytics', provider:'Coursera · Google', year:'2025', icon:'ri-google-fill', color:'from-sky-500 to-blue-500', link:'#' },
-  { title:'Machine Learning Specialization', provider:'Coursera · DeepLearning.AI', year:'2025', icon:'ri-brain-line', color:'from-purple-500 to-pink-500', link:'#' },
-  { title:'Python for Data Science', provider:'IBM · Coursera', year:'2024', icon:'ri-code-s-slash-line', color:'from-emerald-500 to-teal-500', link:'#' },
-  { title:'SQL for Data Science', provider:'Coursera · UC Davis', year:'2024', icon:'ri-database-2-line', color:'from-amber-500 to-orange-500', link:'#' },
-  { title:'Kaggle Intro to ML', provider:'Kaggle', year:'2024', icon:'ri-trophy-line', color:'from-cyan-500 to-sky-500', link:'#' },
-  { title:'Power BI Essentials', provider:'Microsoft Learn', year:'2025', icon:'ri-bar-chart-2-line', color:'from-yellow-500 to-orange-500', link:'#' },
+  { title:'Full-Stack Web Development', provider:'Udemy · Colt Steele', year:'2025', icon:'ri-code-s-slash-line', color:'from-brand-500 to-purple-500', link:'#' },
+  { title:'React - The Complete Guide', provider:'Udemy · Maximilian Schwarzmüller', year:'2025', icon:'ri-reactjs-line', color:'from-cyan-500 to-blue-500', link:'#' },
+  { title:'JavaScript Algorithms & DS', provider:'freeCodeCamp', year:'2024', icon:'ri-javascript-line', color:'from-amber-500 to-orange-500', link:'#' },
+  { title:'Node.js & Express.js Masterclass', provider:'Udemy', year:'2024', icon:'ri-nodejs-line', color:'from-emerald-500 to-teal-500', link:'#' },
+  { title:'PHP with Laravel for Beginners', provider:'Udemy', year:'2024', icon:'ri-php-line', color:'from-violet-500 to-purple-500', link:'#' },
+  { title:'MySQL Complete Course', provider:'Udemy · MySQL', year:'2024', icon:'ri-database-2-line', color:'from-sky-500 to-blue-500', link:'#' },
 ];
 
 const ACHIEVEMENTS = [
-  { title:'Consistent Academic Excellence', desc:'10th: 93% · 12th: 86% · BSc IT CGPA 8.07', icon:'ri-medal-line', color:'from-amber-500 to-orange-500' },
-  { title:'Kaggle Learner', desc:'Active participant in Kaggle micro-courses & competitions', icon:'ri-trophy-line', color:'from-cyan-500 to-sky-500' },
-  { title:'Open-Source Contributor', desc:'Active GitHub profile (@hardik198) with 12+ public repos', icon:'ri-github-fill', color:'from-slate-500 to-slate-700' },
-  { title:'Hackathon Enthusiast', desc:'Participated in student-level ML hackathons and coding challenges', icon:'ri-fire-line', color:'from-rose-500 to-pink-500' }
+  { title:'Consistent Academic Excellence', desc:'10th: 93% · 12th: 75% · BSc IT CGPA 8.01', icon:'ri-medal-line', color:'from-amber-500 to-orange-500' },
+  { title:'Open-Source Contributor', desc:'Active GitHub profile (@palak183) with 12+ public repos', icon:'ri-github-fill', color:'from-slate-500 to-slate-700' },
+  { title:'Full-Stack Project Builder', desc:'Built 8+ real-world full-stack and frontend projects', icon:'ri-rocket-2-line', color:'from-brand-500 to-purple-500' },
+  { title:'Continuous Learner', desc:'Completed 6+ certifications in web development & frameworks', icon:'ri-award-line', color:'from-rose-500 to-pink-500' }
 ];
 
 const SERVICES = [
-  { title:'Data Analysis',            desc:'Turn raw data into insights with Python, SQL, and statistics.', icon:'ri-search-eye-line',        color:'from-brand-500 to-purple-500' },
-  { title:'Machine Learning',         desc:'Design, train, and evaluate models for classification, regression, and forecasting.', icon:'ri-brain-line', color:'from-pink-500 to-rose-500' },
-  { title:'Power BI Dashboards',      desc:'Executive-grade dashboards with drill-through, DAX, and storytelling.', icon:'ri-pie-chart-2-line',  color:'from-amber-500 to-orange-500' },
-  { title:'Dashboard Development',    desc:'Interactive web dashboards using Streamlit / Dash / custom stack.', icon:'ri-dashboard-3-line',    color:'from-sky-500 to-blue-500' },
-  { title:'Python Automation',        desc:'Automate repetitive workflows — scraping, reporting, ETL.', icon:'ri-terminal-box-line',       color:'from-emerald-500 to-teal-500' },
-  { title:'SQL & Business Intelligence', desc:'From schema design to complex analytical queries and BI pipelines.', icon:'ri-database-2-line', color:'from-purple-500 to-fuchsia-500' },
+  { title:'Frontend Development',     desc:'Build responsive, interactive UIs with React, Angular, HTML, CSS, and JavaScript.', icon:'ri-layout-line',          color:'from-brand-500 to-purple-500' },
+  { title:'Backend Development',      desc:'Develop robust server-side applications with Node.js, Express.js, PHP, and Laravel.', icon:'ri-server-line',         color:'from-pink-500 to-rose-500' },
+  { title:'Full-Stack Web Apps',      desc:'End-to-end web application development from database design to deployment.', icon:'ri-stack-line',              color:'from-amber-500 to-orange-500' },
+  { title:'REST API Development',     desc:'Design and build secure, scalable RESTful APIs with proper documentation.', icon:'ri-api-line',                  color:'from-sky-500 to-blue-500' },
+  { title:'Database Design',          desc:'Create efficient database schemas, queries, and optimizations for MySQL and MongoDB.', icon:'ri-database-2-line',   color:'from-emerald-500 to-teal-500' },
+  { title:'Responsive Web Design',    desc:'Pixel-perfect, mobile-first responsive designs using Bootstrap, Tailwind CSS, and modern CSS.', icon:'ri-layout-responsive-line', color:'from-purple-500 to-fuchsia-500' },
 ];
 
 const REPOS = [
-  { name:'churn-prediction',  desc:'End-to-end churn ML pipeline with Streamlit demo.',  lang:'Python',   stars:12, forks:3, updated:'2 weeks ago' },
-  { name:'movie-recommender', desc:'Content-based recommender on MovieLens dataset.',    lang:'Python',   stars:8,  forks:2, updated:'1 month ago' },
-  { name:'sales-dashboard',   desc:'Power BI + SQL retail analytics with 100K+ rows.',   lang:'DAX',      stars:5,  forks:1, updated:'3 weeks ago' },
-  { name:'digit-recognition', desc:'MNIST CNN + real-time OpenCV interface.',            lang:'Python',   stars:3,  forks:0, updated:'6 weeks ago' },
-  { name:'sentiment-api',     desc:'Twitter sentiment analysis with Flask REST API.',    lang:'Python',   stars:6,  forks:1, updated:'5 weeks ago' },
-  { name:'sql-practice',      desc:'50+ SQL solutions on LeetCode & HackerRank.',        lang:'SQL',      stars:4,  forks:0, updated:'1 week ago' },
+  { name:'ecommerce-app',       desc:'Full-stack e-commerce with React, Node.js & MongoDB.',     lang:'JavaScript', stars:10, forks:4, updated:'2 weeks ago' },
+  { name:'task-manager',        desc:'Angular + Laravel collaborative task management system.',    lang:'TypeScript', stars:7,  forks:2, updated:'1 month ago' },
+  { name:'portfolio-website',   desc:'Modern portfolio with Tailwind CSS & ApexCharts.',           lang:'HTML',       stars:5,  forks:1, updated:'3 weeks ago' },
+  { name:'student-management',  desc:'PHP & MySQL student management system.',                     lang:'PHP',        stars:4,  forks:1, updated:'6 weeks ago' },
+  { name:'blog-platform',       desc:'React & Express.js multi-user blog platform.',               lang:'JavaScript', stars:6,  forks:2, updated:'5 weeks ago' },
+  { name:'weather-dashboard',   desc:'JavaScript weather app with OpenWeather API.',               lang:'JavaScript', stars:3,  forks:0, updated:'1 week ago' },
 ];
 
 const TESTIMONIALS = [
-  { name:'Prof. R. Shah', role:'Faculty, MSc IT — Data Science', text:'Hardik shows exceptional curiosity and rigor in machine learning projects. He learns fast and communicates results clearly.' },
-  { name:'A. Mehta', role:'Peer, Kaggle collaborator', text:'Great teammate for hackathons — brings both the coding skill and the analytical mindset to the table.' },
-  { name:'S. Patel', role:'Mentor', text:'Consistently delivers polished, deployable ML projects — not just notebooks. That mindset makes him ready for industry.' }
+  { name:'Prof. R. Shah', role:'Faculty, BSc IT — HNGU Patan', text:'Palak shows exceptional dedication and skill in full-stack development. She builds clean, well-structured code and learns new technologies quickly.' },
+  { name:'A. Mehta', role:'Peer, Project Collaborator', text:'Great teammate for web development projects — brings both frontend creativity and backend logic to the table. Always delivers on time.' },
+  { name:'S. Patel', role:'Mentor', text:'Consistently delivers polished, deployable web applications — not just assignments. That mindset makes her ready for industry-level full-stack roles.' }
 ];
 
 /* ---------- Utils ---------- */
@@ -372,7 +372,7 @@ $('#servicesGrid').innerHTML = SERVICES.map(s=>`
 
 /* ---------- GitHub repos ---------- */
 $('#repoGrid').innerHTML = REPOS.map(r=>`
-  <a href="https://github.com/hardik198" target="_blank" class="glass card rounded-2xl p-5 block">
+  <a href="https://github.com/palak183" target="_blank" class="glass card rounded-2xl p-5 block">
     <div class="flex items-center gap-2">
       <i class="ri-git-repository-line text-brand-500"></i>
       <div class="font-semibold truncate">${r.name}</div>
@@ -433,12 +433,12 @@ function renderCharts(){
   const t = chartTheme();
   const baseChart = { background:'transparent', foreColor:t.text, toolbar:{show:false}, fontFamily:'Inter, sans-serif', animations:{enabled:true, speed:600} };
 
-  // Model accuracy bar
+  // Project tech distribution bar
   const modelOpts = {
     chart:{...baseChart, type:'bar', height:320},
-    series:[{ name:'Accuracy %', data:[86, 99, 88, 92, 84, 90] }],
-    xaxis:{ categories:['Churn','Digit CNN','Sentiment','House Price','Recommender','Sales Model'], labels:{style:{colors:t.text}, rotate:-20} },
-    yaxis:{ min:70, max:100, labels:{style:{colors:t.text}, formatter:v=>v+'%'} },
+    series:[{ name:'Proficiency %', data:[88, 85, 80, 78, 85, 82] }],
+    xaxis:{ categories:['React','Node.js','Angular','Laravel','JavaScript','MySQL'], labels:{style:{colors:t.text}, rotate:-20} },
+    yaxis:{ min:60, max:100, labels:{style:{colors:t.text}, formatter:v=>v+'%'} },
     plotOptions:{ bar:{ borderRadius:6, columnWidth:'55%', distributed:true } },
     colors:['#6366f1','#a855f7','#ec4899','#0ea5e9','#10b981','#f59e0b'],
     dataLabels:{enabled:true, formatter:v=>v+'%', style:{colors:['#fff']}},
@@ -449,8 +449,8 @@ function renderCharts(){
 
   const skillOpts = {
     chart:{...baseChart, type:'donut', height:320},
-    series:[35, 20, 15, 15, 15],
-    labels:['Python & ML','Data Analysis','Visualization','SQL & DB','Deployment'],
+    series:[35, 25, 15, 15, 10],
+    labels:['Frontend','Backend','Database','Tools & DevOps','API & Testing'],
     colors:['#6366f1','#a855f7','#ec4899','#0ea5e9','#10b981'],
     legend:{position:'bottom', labels:{colors:t.text}},
     stroke:{width:2, colors:['transparent']},
@@ -497,7 +497,7 @@ $$('.fade-in').forEach(el=>io.observe(el));
 $('#contactForm').addEventListener('submit', e=>{
   e.preventDefault();
   const data = Object.fromEntries(new FormData(e.target));
-  const mailto = `mailto:panchalhardik183@gmail.com?subject=${encodeURIComponent(data.subject||'Portfolio inquiry')}&body=${encodeURIComponent(`From: ${data.name} (${data.email})\n\n${data.message}`)}`;
+  const mailto = `mailto:palakpanchal182@gmail.com?subject=${encodeURIComponent(data.subject||'Portfolio inquiry')}&body=${encodeURIComponent(`From: ${data.name} (${data.email})\n\n${data.message}`)}`;
   window.location.href = mailto;
   $('#formMsg').textContent = 'Opening your email client…';
   e.target.reset();
@@ -505,7 +505,7 @@ $('#contactForm').addEventListener('submit', e=>{
 
 /* ---------- Visitor counter (localStorage mock) ---------- */
 (function(){
-  const key = 'hp_visits';
+  const key = 'pp_visits';
   let n = +localStorage.getItem(key) || 1247;
   n += 1; localStorage.setItem(key, n);
   $('#visitorCount').textContent = n.toLocaleString();

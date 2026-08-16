@@ -8,28 +8,28 @@ Estimated: ~10 minutes total.
 
 ## ✅ Prerequisites (one-time)
 
-1. A **GitHub account** — you already have one: `hardik198`
+1. A **GitHub account** — you already have one: `palak183`
 2. **Git installed locally**
    - macOS: `brew install git`
    - Windows: download from https://git-scm.com/download/win
    - Linux: `sudo apt install git`
 3. Configure Git once:
    ```bash
-   git config --global user.name "Hardik Panchal"
-   git config --global user.email "panchalhardik183@gmail.com"
+   git config --global user.name "Palak Panchal"
+   git config --global user.email "palakpanchal182@gmail.com"
    ```
 
 ---
 
 ## Option A — Deploy to GitHub Pages (recommended, free, easiest)
 
-Because your GitHub username is `hardik198`, creating a repo named
-**`hardik198.github.io`** gives you the URL **https://hardik198.github.io/** automatically.
+Because your GitHub username is `palak183`, creating a repo named
+**`palak183.github.io`** gives you the URL **https://palak183.github.io/** automatically.
 
 ### Step 1 — Create the repo on GitHub
 
 1. Go to https://github.com/new
-2. Repository name: **`hardik198.github.io`** ← must match this exactly
+2. Repository name: **`palak183.github.io`** ← must match this exactly
 3. Visibility: **Public**
 4. Do **NOT** initialize with README (you already have one).
 5. Click **Create repository**.
@@ -43,7 +43,7 @@ git init
 git add .
 git commit -m "feat: initial portfolio"
 git branch -M main
-git remote add origin https://github.com/hardik198/hardik198.github.io.git
+git remote add origin https://github.com/palak183/palak183.github.io.git
 git push -u origin main
 ```
 
@@ -56,11 +56,11 @@ git push -u origin main
 2. Under **Build and deployment → Source**, choose one:
    - **Deploy from a branch** → branch `main` → folder `/ (root)` → **Save**
    - *OR* **GitHub Actions** — the `.github/workflows/deploy.yml` in this repo will pick it up automatically.
-3. Wait 30–60 seconds. Your site is live at **https://hardik198.github.io/**
+3. Wait 30–60 seconds. Your site is live at **https://palak183.github.io/**
 
 ### Step 4 — Verify
 
-Open https://hardik198.github.io/ in a browser. You should see your portfolio.
+Open https://palak183.github.io/ in a browser. You should see your portfolio.
 Click **"Resume"** in the header — the PDF should download.
 
 ---
@@ -69,12 +69,12 @@ Click **"Resume"** in the header — the PDF should download.
 
 1. Push your repo to GitHub (steps 1–2 above).
 2. Go to https://vercel.com/new
-3. **Import** the `hardik198.github.io` repo.
+3. **Import** the `palak183.github.io` repo.
 4. Framework preset: **Other**
    - Build command: *(leave empty)*
    - Output directory: `.`
 5. Click **Deploy**.
-6. Your site is live in ~30s at a URL like `https://hardik198.vercel.app`.
+6. Your site is live in ~30s at a URL like `https://palak183.vercel.app`.
 
 The `vercel.json` in this project already applies smart caching + security headers.
 
@@ -92,14 +92,14 @@ The `netlify.toml` in this project handles headers + caching automatically.
 
 ---
 
-## 🌐 Optional — Custom Domain (e.g., `hardikpanchal.dev`)
+## 🌐 Optional — Custom Domain (e.g., `palakpanchal.dev`)
 
 ### On GitHub Pages
 1. Buy a domain at Namecheap / GoDaddy / Cloudflare (~$10/year).
 2. In your repo → **Settings → Pages → Custom domain** → enter your domain → **Save**.
 3. At your registrar's DNS panel, add:
    - `A` records for `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - `CNAME` record for `www` → `hardik198.github.io`
+   - `CNAME` record for `www` → `palak183.github.io`
 4. Wait ~10 minutes for DNS to propagate.
 5. Back on GitHub Pages, tick **Enforce HTTPS**.
 
@@ -117,7 +117,7 @@ Open your live URL and check:
 - [ ] Hero animations play
 - [ ] Dark/Light toggle works and charts re-render
 - [ ] Projects filter + search work
-- [ ] Resume button downloads `Hardik_Panchal_Resume.pdf`
+- [ ] Resume button downloads `Palak_Panchal_Resume.pdf`
 - [ ] Contact form opens mail client (`mailto:`)
 - [ ] Mobile view (open on your phone!)
 - [ ] Update the OG image + canonical URL in `index.html` if you use a custom domain
@@ -152,7 +152,7 @@ Open your live URL and check:
 - LinkedIn: pin the link to your profile's "Featured" section
 - Twitter/X: tweet with your OG preview
 - Resume: replace all "GitHub link" fields with the portfolio URL
-- Email signature: `Portfolio: https://hardik198.github.io/`
+- Email signature: `Portfolio: https://palak183.github.io/`
 
 ---
 
@@ -160,8 +160,8 @@ Open your live URL and check:
 
 | Problem | Fix |
 |---------|-----|
-| 404 on GitHub Pages | Wait 2 min; make sure the repo name is exactly `hardik198.github.io`; check Settings → Pages is enabled |
-| Resume button broken | Ensure `Hardik_Panchal_Resume.pdf` is in the same folder as `index.html` |
+| 404 on GitHub Pages | Wait 2 min; make sure the repo name is exactly `palak183.github.io`; check Settings → Pages is enabled |
+| Resume button broken | Ensure `Palak_Panchal_Resume.pdf` is in the same folder as `index.html` |
 | Fonts not loading | Google Fonts requires internet — hard-refresh the page (Ctrl+F5) |
 | Charts blank | Open browser console (F12), check for ad-blocker blocking `cdn.jsdelivr.net` |
 | Dark mode not persisting | This is by design (session-only). Ask me to add `localStorage` persistence if you want. |
